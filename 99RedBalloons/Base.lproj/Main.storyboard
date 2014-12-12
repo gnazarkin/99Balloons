@@ -22,7 +22,7 @@
                                     <rect key="frame" x="0.0" y="41" width="364" height="479.5"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="625"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 </variation>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znh-sG-wvf">
