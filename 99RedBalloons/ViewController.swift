@@ -19,30 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for var i = 0; i < 99; i++ {
-            var balloon = Balloon()
-            balloon.amount = i
-    
-            let randomNumber = Int(arc4random_uniform(UInt32(5)))
-            
-            if randomNumber == 0 {
-                balloon.image = UIImage(named: "BerlinTVTower.jpg")
-            }
-            else if randomNumber == 1 {
-                balloon.image = UIImage(named: "RedBalloon1.jpg")
-            }
-            else if randomNumber == 2 {
-                balloon.image = UIImage(named: "RedBalloon2.jpg")
-            }
-            else if randomNumber == 3 {
-                balloon.image = UIImage(named: "RedBalloon3.jpg")
-            }
-            else {
-                balloon.image = UIImage(named: "RedBalloon4.jpg")
-            }
-            
-            self.myBalloons.append(balloon)
-        }
+        createBalloons()
         
     }
     
@@ -56,7 +33,32 @@ class ViewController: UIViewController {
         let randomNumber = Int(arc4random_uniform(UInt32(99)))
         var balloon = myBalloons[randomNumber]
         balloonImage.image = balloon.image
-        balloonLabel.text = "\(balloon.amount) Balloons"
+        balloonLabel.text = "\(balloon.amount) ballons"
+    }
+    
+    
+    func createBalloons(){
+        
+        for var i = 0; i <= 99; i++ {
+            var balloon = Balloon()
+            balloon.amount = i
+            
+            let randomNumber = Int(arc4random_uniform(UInt32(4)))
+            
+            switch randomNumber  {
+            case 1:
+                balloon.image = UIImage(named: "RedBalloon1.jpg")
+            case 2:
+                balloon.image = UIImage(named: "RedBalloon2.jpg")
+            case 3:
+                balloon.image = UIImage(named: "RedBalloon3.jpg")
+            default:
+                balloon.image = UIImage(named: "RedBalloon4.jpg")
+            }
+            
+            self.myBalloons.append(balloon)
+        }
+        
     }
     
 
